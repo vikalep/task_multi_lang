@@ -9,7 +9,6 @@ def pytest_addoption(parser):
 @pytest.fixture(scope="function")
 def browser(request):
     language = request.config.getoption("language")
-    def browser():
     print("\nstart browser for test..")
     browser = webdriver.Chrome()
     yield browser
